@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:code.claude.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git mv:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(sed -n:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(awk:*)",
+      "Bash(echo:*)",
+      "Bash(python3 -)",
+      "Bash(python3 -c:*)",
+      "Edit(/docs/**)",
+      "Edit(/.claude/**)",
+      "Edit(/registry.yaml)",
+      "Edit(/CLAUDE.md)"
+    ],
+    "deny": ["Read(/.env)", "Read(./.env)", "Edit(/.env)"]
+  }
+}
