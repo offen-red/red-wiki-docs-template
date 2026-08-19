@@ -20,7 +20,8 @@ panel: true # 읽기만 한다. Read·Glob·Grep 로 충분하다
 
 `index.md` → `registry.yaml` 순. grep 은 **이 둘로 좁힌 다음** 쓴다. 처음부터 grep 하면 있는 것만 찾고 **없다는 사실은 못 찾는다** — 이 스킬에서 빈 곳 목록은 결과의 절반이다.
 
-주제가 `registry.yaml` 의 `domains:` 에 걸리면 **`docs/wiki/domains/` 를 그다음에 본다.** 여러 문서에 흩어진 것을 이미 개념 단위로 모아 둔 층이라 훑는 시간을 줄여 준다. 인용은 그 문서의 `from:` 원본에서 한다.
+주제가 `registry.yaml` 의 `domains:` 에 걸리면 그 도메인이 **어느 시스템에 걸리는지**를 먼저 잡고
+(`domains[].systems`), 그 시스템의 문서를 훑는다. 열려 있는 저장소 전부가 대상이다.
 
 ### 3. 읽은 것을 세면서 읽는다
 

@@ -15,7 +15,7 @@ type: doc # doc | hub | screen | guide | skill (뷰어 렌더 분기)
 summary: 한 줄 요약 # index.md·카탈로그에 실림
 source: docs/_sources/<문서 폴더>/... # 어느 원천에서 왔나 (경로 또는 URL)
 related: [경로, ...] # 백링크
-domains: [도메인-id, ...] # wiki/domains/ 참조 (복사 금지, 링크만)
+domains: [도메인-id, ...] # registry.yaml 의 domains: 키
 generated: true # AI가 초안을 썼고 사람이 아직 확인 안 함
 ```
 
@@ -43,21 +43,9 @@ authoritative: req-excel
 
 **`authoritative` 는 반드시 하나.** "어디가 최신이지?"를 없애는 장치다.
 
-## `wiki/` 문서
-
-```yaml
----
-title: 공격 표면
-generated: true # 필수 — 항상 true
-from: [docs/product/systems/overview.md, ...] # 필수 — 파생 원본
----
-```
-
-`from:` 이 재생성 가능성을 보증한다. `from:` 없는 `wiki/` 문서는 앱의 카탈로그 검사에 걸린다.
-
 ## 변경 이력
 
-**`docs/product/` 문서만 쌓는다.** `ops/` 는 git log 로 충분하고, `wiki/` 는 원본에서 다시 만들어지는 층이라 이력이 의미가 없다.
+**`docs/product/` 문서만 쌓는다.** `ops/` 는 git log 로 충분하다.
 
 **본문에 표로 쓰지 않는다.** 문서마다 짝이 되는 `<문서>.history.yaml` 에 쌓고 뷰어가 본문 아래에 이어 그린다. **짝 파일은 문서 옆에 둔다 — 이력이 붙어도 문서를 옮기지 않는다.** 경로가 생애 중간에 바뀌면 `registry.yaml`·상대링크가 한꺼번에 어긋난다. 에디터 트리에서는 `.vscode/settings.json` 의 fileNesting 이 짝 파일을 본문 아래로 접는다.
 
