@@ -2,7 +2,6 @@
 type: guide
 title: change-propagation
 status: 작성중
-owner: {{OWNER}}
 name: change-propagation
 description: 문서·원천 하나를 고친 뒤 영향받는 다른 문서와 registry.yaml 을 찾아 일괄로 맞춘다. 사용자가 "이거 고쳤는데 관련된 것도", "다른 문서에도 반영해줘", "일관성 맞춰줘", "앱 바뀌었어" 라고 할 때 사용한다.
 summary: 한 문서의 변경을 영향 범위 전체에 반영한다.
