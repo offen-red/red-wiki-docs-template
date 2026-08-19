@@ -31,7 +31,7 @@ product:
 #       depends_on: []      # 입력을 받는 다른 시스템이 있으면 그 키
 systems: {}
 
-# 도메인 (DDD) — 정의 본문은 docs/wiki/domains/<키>.md 에 한 번만.
+# 도메인 (DDD) — 라벨과 어느 시스템이 쓰는지만. 정의 본문은 용어집이 갖는다.
 #   systems: 는 **이 저장소가 아는 시스템만** 적는다. 나머지는 그 저장소가 자기 것을 적고 합쳐진다.
 #   예)
 #     attack-surface:
