@@ -14,7 +14,7 @@
 #     nav:     사이드바에서 끌어 놓기(순서) · 폴더 더블클릭(이름)
 #     screens: 화면을 올리거나 지울 때 앱이 맞춘다
 #
-#   규약은 .claude/rules/repo-files.md
+#   규약은 .claude/rules/proposal-block.md 의 「예외 둘」
 # ─────────────────────────────────────────────────────────────
 
 # 제품
@@ -25,18 +25,18 @@ product:
 # 이 저장소가 문서를 들고 있는 시스템.
 #   문서를 쓰기 시작할 때 하나씩 늘린다. 다른 저장소의 시스템은 여기 적지 않는다.
 #   예)
-#     iasm:
-#       label: IASM
-#       summary: 공격 표면을 발견·평가·축소하고 지속 모니터링하는 시스템
+#     billing:
+#       label: 결제
+#       summary: 요금제·청구·환불을 다루는 시스템
 #       depends_on: []      # 입력을 받는 다른 시스템이 있으면 그 키
 systems: {}
 
 # 도메인 (DDD) — 라벨과 어느 시스템이 쓰는지만. 정의 본문은 용어집이 갖는다.
 #   systems: 는 **이 저장소가 아는 시스템만** 적는다. 나머지는 그 저장소가 자기 것을 적고 합쳐진다.
 #   예)
-#     attack-surface:
-#       label: 공격 표면
-#       systems: [iasm]
+#     subscription:
+#       label: 구독
+#       systems: [billing]
 domains: {}
 
 # ── 여기부터 앱이 쓴다 ────────────────────────────────────────
@@ -45,17 +45,11 @@ screens: [] # 아직 등록된 화면이 없다
 
 nav:
   # 사이드바 — 폴더 이름과 순서만. 문서 항목은 앱이 맞춘다(손으로 적지 않는다).
-  #   존 넷과 Skills 는 라벨을 미리 박아 둔다. 비워 두면 앱이 폴더 이름을 그대로 써서
-  #   `product`·`decisions` 같은 소문자 라벨이 붙는다 — 규약은 존을 영문 대문자로 쓴다(CLAUDE.md 4절).
+  #   존 둘은 라벨을 미리 박아 둔다. 비워 두면 앱이 폴더 이름을 그대로 써서
+  #   `product`·`decisions` 같은 소문자 라벨이 붙는다 — 존은 영문 대문자로 쓴다.
   folders:
     - path: product
       label: Product
     - path: decisions
       label: Decisions
-    - path: wiki
-      label: Wiki
-    - path: skills
-      label: Skills
-    - path: ops
-      label: Ops
   views: []
